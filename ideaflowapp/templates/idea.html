@@ -1,0 +1,87 @@
+{% extends "layouts/nav.html" %}
+{% block script %}
+  {{ block.super }}
+  window.locals.idea = {{ idea.id }};
+  $(document).ready(function() { lib('suggestions').init() });
+{% endblock %}
+{% block pagecontent %}
+  {{ block.super }}
+  <div class="row">
+    <div class="span11 offset1">
+      <h2>{{ idea.title }}</h2>
+      <div class="idea-text">{{ idea.text }}</div>
+      <br>
+    </div>
+  </div>
+
+  <hr style="color:#000000; background-color:#000000; height=2px"/>
+
+
+  <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4">
+      <ul class="suggestionlist">
+        {% for s in suggestions %}
+        <li class="li-suggestion container-fluid li-idea" data-id="{{ s.suggestion.id }}">
+          <div class="row-fluid">
+            <div class="span1">
+              <div class="row">
+                <img src="/static/arroworange.png" class="upvote" data-id="{{ s.suggestion.id }}">
+              </div>
+              <div class="row" class="numvotesrow">
+                <span class="numvotes">{{ s.suggestion.upvotes }}</span>
+              </div>
+              <!-- <div class="row">
+                <img src="/static/arrow.png" class="downvote" data-id="{{ idea.id }}">
+              </div>-->
+            </div>
+            <div class="span11">
+              <div class="li-suggestion-body">
+                <div class="li-suggestion-text">{{ s.suggestion.text }}</div>
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <div>
+        <form id="suggestion-form"></form>
+      </div>
+    </div>
+    <div class="span4">
+      <ul class="commentlist">
+        <li style="text-align:center"><a tabindex="-1" href="#">Comment on the Idea</a>
+        </a><br>moretext<br>moretext</a><br>moretext<br>moretext</a><br>moretext</a><br>moretext</li>
+        <input type="text" placeholder="Add a new comment" style="width:95%">
+        <li><a tabindex="-1" href="#">Comment on the Idea</a></li>
+      </ul>    
+    </div>
+    <div class="span3">
+      <ul class="relatedlist">
+        <li style="text-align:center"><a tabindex="-1" href="#">Related Ideas</a>
+        <br>moretext<br>moretext</a><br>moretext<br>moretext</a><br>moretext</a><br>moretext</li>
+      </ul>    
+    </div>  
+  </div>
+</div>
+
+{% endblock %}
+{% block hidden %}
+  <div id="li-suggestion-template"><li class="li-suggestion container-fluid li-idea" data-id="{{ s.suggestion.id }}">
+    <div class="row-fluid">
+      <div class="span1">
+        <div class="row">
+          <img src="/static/arroworange.png" class="upvote">
+        </div>
+        <div class="row" class="numvotesrow">
+          <span class="numvotes"></span>
+        </div>
+      </div>
+      <div class="span11">
+        <div class="li-suggestion-body">
+          <div class="li-suggestion-text"></div>
+        </div>
+      </div>
+    </div>
+  </li>
+{% endblock %}

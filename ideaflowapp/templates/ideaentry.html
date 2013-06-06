@@ -1,0 +1,86 @@
+{% extends "layouts/nav.html" %}
+{% block script %}
+  {{ block.super }}
+  $(document).ready(function() {lib('home').init()});
+{% endblock %}
+{% block pagecontent %}
+  {{ block.super }}
+  <div class="row">
+    <div class="span4 offset4">
+      <!-- <input type="text" class="idea-form-title" id="idea-txt-1" placeholder="title"> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8 offset2">
+      <form id="idea-form" class="form-horizontal idea-form" style="width:100%;margin-left:25px;">
+          <br>
+          <input type="text" class="idea-form-title" id="idea-txt-01" placeholder="title" style="width:100%">
+          <textarea class="idea-form-text" id="idea-txt-2" placeholder="Type your idea..." style="width:100%"></textarea>
+          <input type="text" id="idea-txt-1" placeholder="title" style="width:100%">
+        <input type="submit" class="btn btn-primary" value="Submit your idea!" style="margin-top:20px;">
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span8 offset2" id="listcontainer">
+<ul class="idealist" style="width:100%;">
+        {% for idea in ideas %}
+
+
+        <li class="li-idea container-fluid li-idea" data-id="{{ idea.id }}">
+          <div class="entryBody">
+            <div class="row-fluid">
+              <div class="span1" style="text-align:center;">
+                <div class="row">
+                  <img src="/static/arroworange.png" class="upvote" data-id="{{ idea.id }}">
+                  <span class="numvotes">{{ idea.upvotes }}</span>
+                </div>
+                <!-- <div class="row">
+                  <img src="/static/arrow.png" class="downvote" data-id="{{ idea.id }}">
+                </div>-->
+              </div>
+              <div class="span11">
+                <div class="clearfix">
+                  <a class="li-idea-title" href="/idea/{{ idea.id }}/">{{ idea.title }}:&nbsp;</a>
+                  <div class="li-idea-body">
+                    <div class="li-idea-text">{{ idea.text }}</div>
+                  </div>
+                </div>
+                <div class="li-idea-tags">{% for tag in idea.tagsplit %}<span class="label label-info">{{ tag }}</span>&nbsp;{% endfor %}</div>
+              </div>
+            </div>
+          </div>
+          <div class="entryChildren">
+            <ul class="idealist">
+              
+            </ul>
+          </div>
+
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+{% block hidden %}
+  {{ block.super }}
+  <div id="li-idea-template"><li class="li-idea container-fluid li-idea" data-id="">
+      <div class="row-fluid">
+        <div class="span1" style="text-align:center;">
+          <div class="row">
+            <img src="/static/arroworange.png" class="upvote" data-id="">
+            <span class="numvotes"></span>
+          </div>
+        </div>
+        <div class="span11">
+          <div class="clearfix">
+            <a class="li-idea-title" href=""></a>
+            <div class="li-idea-body">
+              <div class="li-idea-text"></div>
+            </div>
+          </div>
+          <div class="li-idea-tags"></div>
+        </div>
+      </div>
+    </li></div>
+{% endblock hidden %}

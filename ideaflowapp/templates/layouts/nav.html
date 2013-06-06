@@ -1,0 +1,45 @@
+{% extends "layouts/common.html" %}
+{% block js %}
+  {{ block.super }}
+  <script src="/static/util.js"></script>
+{% endblock js %}
+{% block script %}
+  {{ block.super }}
+  window.locals.csrf_token = '{{ csrf_token }}';
+{% endblock script %}
+{% block body %}
+  <div class="top_bar_bg"></div>
+  <div class="top_bar navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/"><span class="logo">idea<span class="letter">overflow</span></span></a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+<!--            <li><a href="/dashboard/">Dashboard</a></li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+  <div class="page container" id="page_container">
+    <div id="pagecontent" class="pagecontent clearfix">
+      <div class="row">
+        <div class="span12">
+        </div>
+      </div>
+      {% block pagecontent %}{% endblock %}
+    </div>
+    <div class="main_footer_parent_container">
+      <footer class="main_footer">
+        <div class="copyright">
+          Copyright &copy; 2013
+        </div>
+      </footer>
+    </div>
+  </div>
+{% endblock body %}

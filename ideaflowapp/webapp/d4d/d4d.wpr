@@ -1,0 +1,14 @@
+#!wing
+#!version=4.0
+##################################################################
+# Wing IDE project file                                          #
+##################################################################
+[project attributes]
+proj.file-list = [loc('cmd.py'),
+                  loc('d4d.py'),
+                  loc('d4dcc.py'),
+                  loc('misc_examples/d4dbooks.py'),
+                  loc('misc_examples/d4ddogs.py'),
+                  loc('misc_examples/smart_tv.py'),
+                  loc('svd_view_doc.txt')]
+proj.file-type = 'shared'

@@ -1,0 +1,509 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"if",
+				"if	if … end"
+			],
+			[
+				"loc",
+				"loc"
+			],
+			[
+				"link",
+				"link"
+			],
+			[
+				"users",
+				"users"
+			],
+			[
+				"tr",
+				"tr"
+			],
+			[
+				"Sell",
+				"Sell"
+			],
+			[
+				"com",
+				"com"
+			],
+			[
+				"About",
+				"about"
+			],
+			[
+				"do",
+				"do"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"selected_items":
+		[
+			[
+				"package control",
+				"Package Control: Add Channel"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/adamchu/Django/ideaflowapp/static/common.css",
+		"/Users/adamchu/Django/ideaoverflow/ideaflowapp/static/common.css",
+		"/Users/adamchu/Django/ideaoverflow/ideaflowapp/static/app.css",
+		"/Users/adamchu/Django/ideaoverflow/ideaflowapp/templates/layouts/nav.html",
+		"/Users/adamchu/Django/ideaoverflow/ideaflowapp/templates/layouts/common.html",
+		"/Users/adamchu/Swap/swap1/app/views/items/_form.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/layouts/application.html.erb",
+		"/Users/adamchu/Swap/swap1/scratchwork.txt",
+		"/Users/adamchu/Swap/swap1/app/views/main/main.html.erb",
+		"/Users/adamchu/Swap/swap1/config/database.yml",
+		"/Users/adamchu/Swap/swap1/app/assets/stylesheets/template3.css.scss",
+		"/Users/adamchu/Swap/swap1/app/controllers/items_controller.rb",
+		"/Users/adamchu/Swap/swap1/app/controllers/application_controller.rb",
+		"/Users/adamchu/Swap/swap1/app/assets/stylesheets/application.css",
+		"/Users/adamchu/Swap/swap1/db/schema.rb",
+		"/Users/adamchu/Swap/swap1/app/assets/stylesheets/template.css",
+		"/Users/adamchu/Swap/swap1/app/views/items/_mainpageitemswithphotos.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/items/_mainpagetwo.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/items/_mainpageitemswithnames.html.erb",
+		"/Users/adamchu/Swap/swap1/vendor/plugins/.gitkeep",
+		"/Users/adamchu/Swap/swap1/app/views/items/index.html.erb",
+		"/Users/adamchu/Swap/swap1/Gemfile",
+		"/Users/adamchu/Swap/swap1/app/views/items/show.html.erb",
+		"/Users/adamchu/code/leaderboard/leaderboard.html",
+		"/Users/adamchu/code/leaderboard/leaderboard.js",
+		"/Users/adamchu/Swap/swap1/app/assets/javascripts/application.js",
+		"/Users/adamchu/Swap/swap1/app/views/users/show.html.erb",
+		"/Users/adamchu/Documents/Harvard/Extracurriculars/HUEA/huea website files/about.html",
+		"/Users/adamchu/Swap/swap1/config/application.rb",
+		"/Users/adamchu/Swap/swap1/app/models/item.rb",
+		"/Users/adamchu/Swap/swap1/app/assets/stylesheets/bootstrap_and_overrides.css.scss",
+		"/Users/adamchu/Swap/swap1/app/assets/stylesheets/contact.css.scss",
+		"/Users/adamchu/Swap/swap1/db/migrate/20120126033117_create_users.rb",
+		"/Users/adamchu/Swap/swap1/app/views/users/edit.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/items/edit.html.erb",
+		"/Users/adamchu/Swap/swap1/config/routes.rb",
+		"/Users/adamchu/Swap/swap1/app/controllers/users_controller.rb",
+		"/Users/adamchu/Swap/swap1/public/index.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/users/index.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/main/about.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/items/_mainpageitems.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/main/contact.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/main/index.html.erb",
+		"/Users/adamchu/Swap/Backups/dec2012/app/views/main/about.html.erb",
+		"/Users/adamchu/Swap/Backups/dec2012/config/routes.rb",
+		"/Users/adamchu/Swap/Backups/dec2012/app/views/layouts/application.html.erb",
+		"/Users/adamchu/Swap/Backups/dec2012/app/controllers/items_controller.rb",
+		"/Users/adamchu/Swap/swap1/db/seeds.rb",
+		"/Users/adamchu/Swap/swap1/app/views/items/itemslist.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/items/_allitems.html.erb",
+		"/Users/adamchu/Swap/swap1/app/models/user.rb",
+		"/Users/adamchu/Swap/swap1/app/models/message.rb",
+		"/Users/adamchu/Swap/swap1/app/controllers/contact_controller.rb",
+		"/Users/adamchu/Swap/swap1/app/mailers/user_mailer.rb",
+		"/Users/adamchu/Swap/swap1/app/views/user_mailer/new_message.text.erb",
+		"/Users/adamchu/Swap/swap1/config/environments/development.rb",
+		"/Users/adamchu/Swap/swap1/solr/pids/development/sunspot-solr-development.pid",
+		"/Users/adamchu/Swap/swap1/app/views/user_mailer/welcome_email.text.erb",
+		"/Users/adamchu/Swap/swap1/app/views/user_mailer/welcome_email.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/contact/new.html.erb",
+		"/Users/adamchu/Swap/swap1/.gitignore",
+		"/Users/adamchu/swap/swap1/app/views/main/main.html.erb",
+		"/Users/adamchu/Swap/Backups/dec2012/app/views/items/_mainpageitemswithnames.html.erb",
+		"/Users/adamchu/Swap/Backups/dec2012/app/views/main/main.html.erb",
+		"/Users/adamchu/Swap/Backups/dec2012/app/views/items/_coreitems.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/items/new.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/users/_form.html.erb",
+		"/Users/adamchu/Swap/swap1_backup/config/sunspot.yml",
+		"/Users/adamchu/Swap/swap1_backup/scratchwork.txt",
+		"/Users/adamchu/Swap/swap1_backup/solr/pids/development/sunspot-solr-development.pid",
+		"/Users/adamchu/Swap/swap1/app/controllers/sessions_facebook_controller.rb",
+		"/Users/adamchu/Swap/swap1/app/controllers/users/omniauth_callbacks_controller.rb",
+		"/Users/adamchu/Swap/swap1/app/assets/stylesheets/template2.css",
+		"/Users/adamchu/Swap/swap1/app/controllers/sessions_controller.rb",
+		"/Users/adamchu/Swap/swap1/app/assets/stylesheets/application.css.scss",
+		"/Users/adamchu/Swap/swap1/log/development.log",
+		"/Users/adamchu/Swap/swap1/tmp/cache/assets/E04/890/sprockets%2F2f5173deea6c795b8fdde723bb4b63af",
+		"/Users/adamchu/Swap/swap1/solr/data/development/spellchecker/segments.gen",
+		"/Users/adamchu/Swap/swap1/log/sunspot-solr-development.log",
+		"/Users/adamchu/Swap/swap1/solr/data/development/index/segments.gen",
+		"/Users/adamchu/Swap/swap1/db/migrate/20120126033303_create_items.rb",
+		"/Users/adamchu/Swap/swap1/db/development.sqlite3",
+		"/Users/adamchu/Swap/swap1/app/controllers/main_controller.rb",
+		"/Users/adamchu/Swap/swap1/Gemfile.lock",
+		"/Users/adamchu/Swap/swap1/app/views/items/_post_new_item.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/users/registrations/edit.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/users/registrations/new.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/layouts/frontpage.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/main/home.html.erb",
+		"/Users/adamchu/Swap/swap1/Rakefile",
+		"/Users/adamchu/Swap/Backups/swap1aug2012/app/views/users/show.html.erb",
+		"/Users/adamchu/Swap/Backups/swap1aug2012/app/views/layouts/application.html.erb",
+		"/Users/adamchu/Swap/swap1/db/migrate/20130117180741_adding_oauth_to_db.rb",
+		"/Users/adamchu/Swap/swap1/db/migrate/20130118091827_add_photo_to_users.rb",
+		"/Users/adamchu/Swap/swap1/app/views/users/sessions/new.html.erb",
+		"/Users/adamchu/Swap/swap1/config/initializers/devise.rb",
+		"/Users/adamchu/Swap/Backups/Jan 5 2013/app/controllers/main_controller.rb",
+		"/Users/adamchu/Swap/swap1/config/initializers/session_store.rb",
+		"/Users/adamchu/Swap/Backups/Jan 5 2013/app/views/layouts/application.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/users/omniauth_callbacks.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/devise/registrations/new.html.erb",
+		"/Users/adamchu/Swap/swap1/app/views/devise/shared/_links.erb",
+		"/Users/adamchu/Swap/swap1/app/views/devise/registrations/edit.html.erb",
+		"/Users/adamchu/Swap/swap1/app/models/type.rb",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/scratchwork2.txt",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/app/views/layouts/application.html.erb",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/app/views/devise/shared/_links.erb",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/app/views/devise/registrations/new.html.erb",
+		"/Users/adamchu/Swap/swap1/config/initializers/omniauth.rb",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/config/environments/development.rb",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/config/locales/devise.en.yml",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/config/environments/production.rb",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/config/initializers/devise.rb",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/config/omniauth.rb",
+		"/Users/adamchu/Swap/Backups/Jan 11 2013 with Active Admin/app/controllers/application_controller.rb",
+		"/Users/adamchu/Swap/swap1/app/views/devise/sessions/new.html.erb",
+		"/Users/adamchu/Swap/swap1/config/sunspot.yml",
+		"/Users/adamchu/Swap/swap1_backup/app/assets/stylesheets/template.css",
+		"/Users/adamchu/Swap/swap1_backup/app/views/items/_allitems.html.erb",
+		"/Users/adamchu/Swap/swap1/app/uploaders/image_uploader.rb",
+		"/Users/adamchu/Swap/swap1/config/initializers/active_admin.rb",
+		"/Users/adamchu/Swap/swap1/config/initializers/kaminari.rb",
+		"/Users/adamchu/Swap/swap1/app/views/main/test.html.erb",
+		"/Users/adamchu/Swap/swap1/app/models/admin_user.rb",
+		"/Users/adamchu/Swap/swap1/config/omniauth.rb",
+		"/Users/adamchu/Swap/swap1/app/controllers/omniauth_callbacks_controller.rb",
+		"/Users/adamchu/Swap/swap1/scratchwork2.txt",
+		"/Users/adamchu/Swap/swap1/app/views/users/passwords/new.html.erb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/adamchu/swap/swap1",
+			"/Users/adamchu/swap/bootstrap",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"hover",
+			"logo",
+			"ideaoverflow",
+			"sign in",
+			"post",
+			"signin-dialog",
+			"post-item",
+			"signin-dialog",
+			"modal",
+			"the problem",
+			"div#search_desc",
+			"div#search",
+			"div#search_desc",
+			"arturo",
+			"name",
+			"_id",
+			"events",
+			"give 5 points",
+			"score",
+			"debug",
+			"</a>",
+			"Andrew",
+			"alicia johnson",
+			"div#search",
+			"search_desc",
+			"post",
+			"inline",
+			"recently posted items",
+			"signin-dialog",
+			"main",
+			"want in",
+			"want in?",
+			"home",
+			"parameter",
+			"active",
+			"form_for",
+			"turquoise",
+			"recently pos",
+			"recently po",
+			"turquoise",
+			"simple_form",
+			"container",
+			"abortonconfigurationerror",
+			"post_button",
+			"new_message",
+			"logo",
+			"recc",
+			"tr",
+			"link_to",
+			"create item",
+			"btn",
+			"&nbsp",
+			"button_to",
+			"data",
+			"min-height",
+			"search_header",
+			"head",
+			"sessions",
+			"<<<<",
+			"<<<<|====|>>>>",
+			"<<<",
+			"require_same_user",
+			"before_filter",
+			"show",
+			"@item",
+			"link_to",
+			"debugger",
+			"hover",
+			"before_filter",
+			"debugger",
+			"session",
+			"sign_in_and_redirect",
+			"users/sign_in",
+			"new_session_path",
+			"new_sign_in_path",
+			"#{",
+			"#{user.id}",
+			"current_user",
+			"current_ser",
+			"validat",
+			"devise",
+			"users/sign_up",
+			"main",
+			"after_sign_in_path",
+			"openssl",
+			"devise",
+			"devise/sessions",
+			"remote_image_url",
+			"user_signed_in?",
+			"current_user",
+			"check_admin_role",
+			"after_sign_in_path",
+			"find_for_facebook_oauth",
+			"root",
+			"email",
+			"sign_up",
+			"passthru",
+			"link_to",
+			"gitignore",
+			"devise",
+			"rails.application.config",
+			"facebook",
+			"find_for_facebook_oauth",
+			"def passthru",
+			"devise_scope",
+			"if devise_mapping.omniauthable",
+			"style",
+			"style=\"class",
+			"img",
+			"hover",
+			"modal",
+			"center",
+			"total",
+			"space_under",
+			"hover",
+			"media-grid",
+			"make_it_blue",
+			"per_page",
+			"will_paginate",
+			"order",
+			"orderorder_b",
+			"order_by",
+			"random",
+			"pagin",
+			"will_paginate",
+			"padding",
+			"container-fluid",
+			"padding"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"FF00FF",
+			"FF99FF"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"confenvde",
+				"swap1/config/environments/development.rb"
+			],
+			[
+				"application.html",
+				"swap1/app/views/layouts/application.html.erb"
+			],
+			[
+				"git",
+				"swap1/.gitignore"
+			],
+			[
+				"tmp/cache/assets/e04/890/sprockets%2f2f5173deea6c795b8fdde723bb4b63af",
+				"tmp/cache/assets/E04/890/sprockets%2F2f5173deea6c795b8fdde723bb4b63af"
+			],
+			[
+				"log/development.log",
+				"log/development.log"
+			],
+			[
+				"log/sunspot-solr-development.log",
+				"log/sunspot-solr-development.log"
+			],
+			[
+				"solr/data/gen",
+				"solr/data/development/spellchecker/segments.gen"
+			],
+			[
+				"solr/data/development/ments.",
+				"solr/data/development/index/segments.gen"
+			],
+			[
+				"applayou",
+				"swap1/app/views/layouts/application.html.erb"
+			],
+			[
+				"routes",
+				"swap1/config/routes.rb"
+			],
+			[
+				"itemfor",
+				"swap1/app/views/items/_form.html.erb"
+			],
+			[
+				"itemcon",
+				"swap1/app/controllers/items_controller.rb"
+			],
+			[
+				"appheler",
+				"swap1/app/helpers/application_helper.rb"
+			],
+			[
+				"laoutapp",
+				"swap1/app/views/layouts/application.html.erb"
+			],
+			[
+				"routes.",
+				"swap1/config/routes.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 227.0,
+	"status_bar_visible": true
+}

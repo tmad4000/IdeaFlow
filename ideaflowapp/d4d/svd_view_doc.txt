@@ -1,0 +1,33 @@
+How to use SVDView to visualize the d4d Analogy Space Matrix
+Lieberman and Fry, Dec 15, 2012
+
+- In the file d4dcc.py, use the instructions for the method
+  write_svdview_files
+  to generate the .coords and .names files needed by SVDview.
+
+- Install the "processing" programming environment on your computer from the
+  processing.org website.
+  We have testing this with version 1.5.1. It might work with version 2.
+  On Windows we've unzipped the processing-1.5.1/ folder at top level on the C drive.
+  On the Mac, the folder will be in /Documents/Processing/
+  
+- Put the svdview folder under that folder, ie under "processsing".
+
+- Move the .coords and .names files created by the function d4dcc.write_svdview_files 
+  from the d4d folder to the folder
+  processing/svdview/data/
+   
+- Launch the processing IDE. On windows do this by double cliciing on
+  processing/processing.exe
+  
+- In the processing ide, open the file processing/svdview/svdview.pde
+
+- In the SVDview processing window, click on the triangle icon at top left.
+
+- This will open a new large window titled "svdview" and a dialog box.
+  The dialog box let's you navigate to your .coords file. 
+  Navigate to the processing/svdview/data/ folder and select the .coord file and open it.
+  
+- The choose file window disappears.
+  In the svdview window you should now see a black background with concepts and
+  lines in "3D". Use the mouse to drag the background to see different parts of the space.

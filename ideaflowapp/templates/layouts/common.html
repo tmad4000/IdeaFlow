@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}Idea Overflow{% endblock title %}</title>
+    <link href="/static/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="/static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/static/flat-ui.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/static/magicsuggest-1.2.3-min.css">
+
+    <link href="/static/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="/static/common.css">
+    <link href="/static/app.css" rel="stylesheet" media="screen">
+
+    {% block css %}{% endblock %}
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    
+    <script type="text/javascript" src="/static/jquery.color.js"></script>
+    <script type="text/javascript" src="/static/magicsuggest-1.2.3-min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/common.js"></script>
+    <script src="/static/app.js"></script>
+
+    {% block js %}{% endblock %}
+    <script>
+      {% block script %}{% endblock script %}
+    </script>
+    {% block head %}{% endblock head %}
+  </head>
+  <body>
+    {% block body %}{% endblock body %}
+    <div style="display:none">
+      {% block hidden %}{% endblock %}
+    </div>
+  </body>
+</html>
