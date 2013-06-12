@@ -1,3 +1,8 @@
+.label-info.expanded {
+  background-color: #C00;
+
+}
+
 .idea-form input[type=text] {
     display: block;
     width: 80%;
@@ -64,8 +69,11 @@ i {
     margin-left:40px;
 }
 .numvotes {
-    margin-left:5px;
     float:left;
+    clear:both;
+    margin-left:24px;
+    margin-top:5px;
+    color: #AAA;
 }
 .numvotesrow {
 }

@@ -9,7 +9,14 @@ lib('home', {
         this.autocompletion();
         this.explorableTags();
         this.titleextract();
-
+        
+        $('#idea-txt-2').focus();
+        window.setTimeout(function() {
+//            $('#idea-txt-1').focus();
+//            $('#idea-txt-2').val('asdf');
+            $('#idea-txt-1').click();
+            $('#idea-txt-2').focus();
+        },500)
        // $('body').on('click','span.label',function() {alert('a')})
         
 //        this.color_ideas();
@@ -155,9 +162,20 @@ lib('home', {
         //$('span.label').click(function() {
         $('body').on('click','span.label',function() {
                 lthis=$(this)
+
+/*                if($(this).hasClass('expanded')) {
+                            $(this).removeClass('expanded')
+                           lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').slideUp();
+                           return;
+                       }
+                $(this).addClass('expanded');
+
+                lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').slideDown();
+*/
+                    $(this).addClass('expanded');
                     $.getJSON('/ajax/getIdeaById/', {'title':$(this).html(),'id':$(this).attr('data-id')},function(xdata) {
 
-                        console.log($(this))
+                        //console.log($(this))
                         idea=xdata[0];
                         //$.each(xdata,function(idea) {
                             //alert(idea['title'])
@@ -201,7 +219,11 @@ lib('home', {
                             //if not already present at this level
                             if(!lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').children().filter('[data-id="'+idea['id']+'"]').length>0) {
                                 //alert("not already there at this level")
-                                lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').prepend(t);
+                                o=$.parseHTML(t)
+                                lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').prepend(o);
+                                
+                                $(o).hide();
+                                $(o).slideDown(200);
                             }
                             //lib('home').explorableTags();
                         //});

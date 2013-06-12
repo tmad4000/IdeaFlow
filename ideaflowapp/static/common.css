@@ -1,3 +1,9 @@
+.label-info.expanded {
+  background-color: #C00;
+
+}
+
+
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -37,7 +43,7 @@ form input[type=text], form input[type=password] {
  /* border: 1px solid #999;*/
   height: 25px;
   padding: 5px;
-  font-size: 16px;
+  font-size: 14px;
   color: #444;
   -webkit-box-shadow: 0 0 0 black,inset 0px 3px 3px #EEE;
   -moz-box-shadow: 0 0 0 black,inset 0px 3px 3px #EEE;
