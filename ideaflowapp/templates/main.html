@@ -46,7 +46,7 @@
                     <div class="li-idea-text">{{ idea.text }}</div>
                   </div>
                 </div>
-                <div class="li-idea-tags">{% for tag in idea.tagsplit %}<span class="label label-info">{{ tag }}</span>&nbsp;{% endfor %}</div>
+                <div class="li-idea-tags">{% for tag in idea.tagsplit %}<span class="label label-info" idea-id="{{idea.id}}">{{ tag }}</span>&nbsp;{% endfor %}</div>
               </div>
             </div>
           </div>

@@ -126,7 +126,7 @@ lib('home', {
         //$('span.label').click(function() {
         $('body').on('click','span.label',function() {
                 lthis=$(this)
-                    $.getJSON('/ajax/getIdeaById/', {'query':$(this).html()},function(xdata) {
+                    $.getJSON('/ajax/getIdeaById/', {'title':$(this).html(),'id':$(this).attr('data-id')},function(xdata) {
 
                         console.log($(this))
                         idea=xdata[0];
@@ -139,7 +139,7 @@ lib('home', {
                             '                  <div class="span1" style="text-align:center;">'+
                             '                    <div class="row">'+
                             '                      <img src="/static/arroworange.png" class="upvote" data-id="' + idea['id'] + '">'+
-                            '                      <span class="numvotes">' + idea.upvotes +'</span>'+
+                            '                      <span class="numvotes">' + idea['upvotes'] +'</span>'+
                             '                    </div>'+
                             '                    <!-- <div class="row">'+
                             '                      <img src="/static/arrow.png" class="downvote" data-id="' + idea['id'] + '">'+
