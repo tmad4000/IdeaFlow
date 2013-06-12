@@ -179,5 +179,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 import dj_database_url
 import os
-if os.getcwd() == "/app":
-    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+#if os.getcwd() == "/app":
+    #DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
