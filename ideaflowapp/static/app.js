@@ -8,10 +8,39 @@ lib('home', {
         lib('ideas').events();
         this.autocompletion();
         this.explorableTags();
+        this.titleextract();
 
        // $('body').on('click','span.label',function() {alert('a')})
         
 //        this.color_ideas();
+    },
+
+    titleextract: function() {
+
+        untouchedTitle=true
+        $('#idea-txt-2').keyup(function() {
+            
+                if(untouchedTitle) {
+                    txt=$(this).val();
+                    var i=-1
+                    if((i=txt.indexOf(":"))>0||(i=txt.indexOf("--"))>0) {
+                        i=Math.min(i,80)
+                    
+                    }
+                    else
+                        i=80
+                    
+
+                    $('#idea-txt-01').val(txt.substr(0,i));
+
+                }
+            }
+        )
+
+        $('#idea-txt-01').keyup(function() {
+                untouchedTitle=false
+            }
+        )
     },
     
     autocompletion: function() {
