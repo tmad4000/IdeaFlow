@@ -104,7 +104,7 @@ def getIdeaById(request):
 #{{tag.id}}
     #TODO: remove DUMMY IDEA
     if len(ideas)==0 :
-        ideas=Idea.objects.filter(id=20)
+        ideas=Idea.objects.filter(id=36)
 #    t = request.GET['autocomplete']
     
     #t='5'
