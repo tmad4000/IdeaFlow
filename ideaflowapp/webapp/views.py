@@ -93,7 +93,6 @@ def addsuggestion(request):
         return to_json(suggestion)    
 
 def getIdeaById(request):
-
     def is_word_prefix(prefix, text):
         prefix = prefix.upper()
         text = text.upper()
@@ -110,8 +109,8 @@ def getIdeaById(request):
         else: return False
     
     t=''
-    if('id' in request.POST):
-        t = request.POST['relatedideas']
+    if('query' in request.GET):
+        t = '' #request.GET['query']
 #    t = request.GET['autocomplete']
     words = t.split(' ')
     ideas = Idea.objects.all()
@@ -136,10 +135,64 @@ def getIdeaById(request):
                         status : 'some status',
                         coolness : val.text
                         '''
+#    return to_json([{'id':8,'name':'asdf','text':'a','status':0} for rank, idea in rank_list])
+    #return(to_json(idea_mapper.getRelatedIdeas('cook')))
+
+    #return to_json([{'id':idea.id,'name':idea.title,'text':idea.text} for rank, idea in rank_list])
+    #return to_json([{'id':idea.id,'name':idea.title,'text':idea.text,'status':0} for rank, idea in rank_list])
+    return to_json([{'id':idea.id,'name':idea.title,'text':idea.text,'status':0,'tags':idea.tags,'upvotes':idea.upvotes} for rank, idea in rank_list])
+    
+        
+'''def getIdeaById(request):
+
+    def is_word_prefix(prefix, text):
+        prefix = prefix.upper()
+        text = text.upper()
+        
+        s = ''
+        for c in text:
+            if (ord(c) >= ord('A') and ord(c) <= ord('Z')) or (ord(c) >= ord('0') and ord(c) <= ord('9')) or c == '_':
+                s += c
+            else:
+                if s.startswith(prefix): return True
+                s = ''
+        
+        if s.startswith(prefix): return True
+        else: return False
+    
+    t=''
+    if('id' in request.POST):
+        t = request.POST['relatedideas']
+#    t = request.GET['autocomplete']
+    words = t.split(' ')
+
+#    targetid=(int)(t['id'])
+    ideas = Idea.objects.filter(id=2)
+    rank_list = []
+    
+    for idea in ideas:
+        numw = 0
+        rank = 0
+        for word in words:
+            if is_word_prefix(word, idea.text) or is_word_prefix(word, idea.title):
+                numw += 1
+                rank += 5 * int(is_word_prefix(word, idea.text)) + int(is_word_prefix(word, idea.title))
+        
+        if numw == len(words):
+            rank_list.append((rank, idea))
+                
+    
+    rank_list.sort()
+    rank_list.reverse()
+    ' id : val.id,
+                        name : val.title,
+                        status : 'some status',
+                        coolness : val.text
+                        ''
     return to_json([{'id':idea.id,'name':idea.title,'text':idea.text,'status':0,'tags':idea.tags,'upvotes':idea.upvotes} for rank, idea in rank_list[0:5]])
     
         
-
+'''
         
 def autocomplete(request):
     def is_word_prefix(prefix, text):

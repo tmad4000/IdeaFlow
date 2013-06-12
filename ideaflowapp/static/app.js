@@ -154,7 +154,8 @@ lib('home', {
                             '                    </div>'+
                             '                    <div class="li-idea-tags">';
                             tagsray=idea.tags.split('<sep>')
-                            for(i in tagsray) t+='<span class="label label-info">' + tagsray[i] + '</span>&nbsp;';
+                            for(i in tagsray)
+                                t+='<span class="label label-info">' + tagsray[i] + '</span>&nbsp;';
 
 
                             t+='</div>'+
@@ -168,7 +169,11 @@ lib('home', {
                             '              </div>'+
                             '            </li>'
 
-                            lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').append(t);
+                            //if not already present at this level
+                            if(!lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').filter('[data-id="'+idea['id']+'"]').length>0) {
+                                //alert("not already there at this level")
+                                lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').append(t);
+                            }
                             //lib('home').explorableTags();
                         //});
 
