@@ -99,9 +99,10 @@ def getIdeaById(request):
         t = request.GET['id']
         ideas = Idea.objects.filter(id=t)
     else:
-        ideas = Idea.objects.filter(title=request.GET['title'])
-
-    #todo: remove DUMMY IDEA
+        ideas = Idea.objects.filter(title__icontains=request.GET['title'].strip()) #TODO: change away from icontains to iexact -- not right
+        print request.GET['title']
+#{{tag.id}}
+    #TODO: remove DUMMY IDEA
     if len(ideas)==0 :
         ideas=Idea.objects.filter(id=20)
 #    t = request.GET['autocomplete']
@@ -113,7 +114,7 @@ def getIdeaById(request):
 #    if len(ideas)>0:
 #    rank_list.append(ideas[0])
 #    rank_list.append(ideas[0])
-    print ideas[0].title
+
 
 #    return to_json([{'id':idea.id,'name':idea.title,'text':idea.text,'status':0,'tags':idea.tags,'upvotes':idea.upvotes} for rank, idea in rank_list])
     return to_json([{'id':idea.id,'name':idea.title,'text':idea.text,'status':0,'tags':idea.tags,'upvotes':idea.upvotes}])

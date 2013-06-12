@@ -170,7 +170,7 @@ lib('home', {
                             '            </li>'
 
                             //if not already present at this level
-                            if(!lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').filter('[data-id="'+idea['id']+'"]').length>0) {
+                            if(!lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').children().filter('[data-id="'+idea['id']+'"]').length>0) {
                                 //alert("not already there at this level")
                                 lthis.parentsUntil('ul').children('.entryChildren').children('.idealist').append(t);
                             }
