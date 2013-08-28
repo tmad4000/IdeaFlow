@@ -14,10 +14,10 @@
     <div class="span8 offset2">
       <form id="idea-form" class="form-horizontal idea-form" style="width:100%;margin-left:25px;">
           <br>
-          <input type="text" class="idea-form-title" id="idea-txt-01" placeholder="title" style="width:100%">
+          <input type="text" class="idea-form-title" id="idea-title" placeholder="title" style="width:100%">
           <textarea class="idea-form-text" id="idea-txt-2" placeholder="Type your idea..." style="width:100%"></textarea>
-          <input type="text" id="idea-txt-1" placeholder="title" style="width:100%">
-        <input type="submit" class="btn btn-primary" value="Submit your idea!" style="margin-top:20px;">
+          <input type="text" id="idea-txt-1" placeholder="title" style="width:100%"> <!-- Related ideas -->
+        <input type="submit" class="btn btn-primary" value="Submit y0our idea!" style="margin-top:20px;">
       </form>
     </div>
   </div>
@@ -33,8 +33,8 @@
               <div class="span1" style="text-align:center;">
                 <div class="row">
                   <img src="/static/arroworange.png" class="upvote" data-id="{{ idea.id }}">
-                  <span class="numvotes">{{ idea.upvotes }}</span>
-                </div>
+                  <span class="numvotes">{{ idea.upvotes }}</span> 
+               </div>
                 <!-- <div class="row">
                   <img src="/static/arrow.png" class="downvote" data-id="{{ idea.id }}">
                 </div>-->
@@ -55,7 +55,9 @@
               
             </ul>
           </div>
-
+          <form id="addSuggestion">
+            <input type="submit">
+          </form>
         </li>
         {% endfor %}
       </ul>

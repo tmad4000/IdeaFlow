@@ -38,13 +38,13 @@ lib('home', {
                         i=80
                     
 
-                    $('#idea-txt-01').val(txt.substr(0,i));
+                    $('#idea-title').val(txt.substr(0,i));
 
                 }
             }
         )
 
-        $('#idea-txt-01').keyup(function() {
+        $('#idea-title').keyup(function() {
                 untouchedTitle=false
             }
         )
@@ -118,13 +118,15 @@ lib('home', {
                             '<div style="font-family: Arial; font-weight: bold">' + city.name + '</div>' +
                             '<div><b>Text</b>: ' + city.coolness + '</div>' +
                            '</div>';
-                },
+                },  
                 minChars: 1,
                 selectionStacked: true,
                 data: '/ajax/autocomplete/?autocomplete=' //jsonData2
             });      */                  
  //       });
+
             $('#idea-txt-1').magicSuggest({
+
                 // selectionPosition: 'right',
                 selectionCls: 'selectedx',
                 renderer: function(idea){
@@ -140,7 +142,7 @@ lib('home', {
                 expanded:true,
                 expandOnFocus:true,
                 maxDropHeight:'500px',
-
+                emtpyText:'asdfjkasl',
                 name:'query',
                 data: '/ajax/autocomplete/' //jsonData2
             });                  
