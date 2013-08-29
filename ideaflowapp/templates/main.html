@@ -7,7 +7,7 @@
   {{ block.super }}
   <div class="row">
     <div class="span4 offset4">
-      <!-- <input type="text" class="idea-form-title" id="idea-txt-1" placeholder="title"> -->
+      <!-- <input type="text" class="idea-form-title" id="autofill-related" placeholder="title"> -->
     </div>
   </div>
   <div class="row">
@@ -16,8 +16,14 @@
           <br>
           <input type="text" class="idea-form-title" id="idea-title" placeholder="title" style="width:100%">
           <textarea class="idea-form-text" id="idea-txt-2" placeholder="Type your idea..." style="width:100%"></textarea>
-          <input type="text" id="idea-txt-1" placeholder="title" style="width:100%"> <!-- Related ideas -->
-        <input type="submit" class="btn btn-primary" value="Submit your idea!" style="margin-top:20px;">
+
+          <div class="autofill-container autofill-addidea-container">
+            <input type="text" class="autofill-addidea override" placeholder="title" style="width:300px"> <!-- Related ideas -->
+<!--            <input type="text" class="autofill-inline" id="{{ idea.id }}" placeholder="title" style="width:300px">-->
+          </div>
+        <div style="clear: both;padding-top: 20px;float: right;">
+        <input type="submit" class="btn btn-primary" value="Submit your idea!" style="float:left">
+        </div>
       </form>
     </div>
   </div>
@@ -55,9 +61,11 @@
               
             </ul>
           </div>
-          <form id="addSuggestion">
-            <input type="text" id="idea-txt-2" placeholder="title" style="width:100%"> <!-- Related ideas -->
-        <input type="submit" class="btn btn-primary" value="Submit your idea!" style="margin-top:20px;">
+          <form class="autofill-inline-form">
+          <div class="autofill-container autofill-inline-container">
+            <input type="text" class="autofill-inline override" id="{{ idea.id }}" placeholder="title" style="width:300px">
+          </div>
+
           </form>
         </li>
         {% endfor %}

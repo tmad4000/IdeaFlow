@@ -41,13 +41,14 @@ body {
 form input[type=text], form input[type=password] {
   width: 220px;
  /* border: 1px solid #999;*/
-  height: 25px;
-  padding: 5px;
+  height: auto;
+ /* padding: 5px; */
   font-size: 14px;
   color: #444;
-  -webkit-box-shadow: 0 0 0 black,inset 0px 3px 3px #EEE;
+ /* -webkit-box-shadow: 0 0 0 black,inset 0px 3px 3px #EEE;
   -moz-box-shadow: 0 0 0 black,inset 0px 3px 3px #EEE;
   box-shadow: 0 0 0 black,inset 0px 3px 3px #EEE;
+  */
   border-radius: 5px;
 }
 

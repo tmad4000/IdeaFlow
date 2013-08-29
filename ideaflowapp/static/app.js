@@ -1,8 +1,15 @@
 lib('home', {
 
-    init: function() {
+    init: function() {            
+
+     
         $('#idea-form').submit(function() {
             lib('ideas').add();
+            return false;
+        });
+        $('.addSuggestion').submit(function() {
+            var id = $(this).attr('id');
+            lib('ideas').add_related(id);
             return false;
         });
         lib('ideas').events();
@@ -125,7 +132,62 @@ lib('home', {
             });      */                  
  //       });
 
-            $('#idea-txt-1').magicSuggest({
+/*
+        var msAutofillAddIdea = $('.autofill-addidea').magicSuggest({
+                data: [{id:1,label:'one'}, {id:2,label:'two'}, {id:3,label:'three'}],
+                displayField: 'label',
+                value: [1,3],
+
+                //emptyText:'asdfjkasl',
+                selectionPosition: 'right',
+                selectionStacked: true
+            });
+
+            console.log(x=msAutofillAddIdea)
+            */
+        /*
+        var msAutofillInline = $('.autofill-inline').magicSuggest({
+                data: [{id:1,label:'one'}, {id:2,label:'two'}, {id:3,label:'three'}],
+                displayField: 'label',
+                value: [1,3],
+                selectionPosition: 'right',
+                selectionStacked: true,
+            });
+        */
+            var msAutofillInlines = $('.autofill-inline').magicSuggest({
+
+                // selectionPosition: 'right',
+                selectionCls: 'selectedx',
+                renderer: function(idea){
+                    //console.log(idea.name)
+                    return '<div>' +
+                            '<div style="font-family: Arial; font-weight: bold">' + idea.name + '</div>' +
+                            '<div><b>Text</b>: ' + idea.text + '</div>' +
+                           '</div>';
+                },
+                minChars: 0,
+                method:'GET',
+                expanded:true,
+                expandOnFocus:true,
+                maxDropHeight:'500px',
+                name:'query',
+                data: '/ajax/autocomplete/', //jsonData2
+                // data: [{id:1,label:'one'}, {id:2,label:'two'}, {id:3,label:'three'}],
+                displayField: 'label',
+                value: [1,3],
+                selectionPosition: 'right',
+                selectionStacked: true
+            }); 
+
+       
+
+            $('.autofill-container input'). attr('placeholder','Type related ideas');
+
+        //  $("#ms-ctn-0").css('width','500px');
+
+
+
+            var msAutofillAddIdea = $('.autofill-addidea').magicSuggest({
 
                 // selectionPosition: 'right',
                 selectionCls: 'selectedx',
@@ -142,10 +204,18 @@ lib('home', {
                 expanded:true,
                 expandOnFocus:true,
                 maxDropHeight:'500px',
-                emtpyText:'asdfjkasl',
                 name:'query',
-                data: '/ajax/autocomplete/' //jsonData2
-            });                  
+                data: '/ajax/autocomplete/', //jsonData2
+                                selectionPosition: 'right',
+                selectionStacked: true
+            });    
+                 $(msAutofillAddIdea).on('load', function(){
+                msAutofillAddIdea.setValue(14183);
+            });
+
+            console.log(x=msAutofillAddIdea);
+
+            $('.ms-res-ctn').css('height','auto');
 
 
     },
@@ -257,6 +327,50 @@ lib('ideas', {
         success);
         $('.li-idea[data-id="' + id + '"] .numvotes').attr('voted','true');
         }
+    },
+
+    add_related: function(form_id) {
+        var searchfor = "#autofill-related-"+String(form_id);
+        var idea = {
+            related: $(searchfor).val(),
+        };
+
+        if (idea.related == '') {
+            alert('Please fill in your tag!');
+            return;
+        };
+
+        // empty the value
+        $(searchfor).val('');
+
+        // send the idea to the server
+        lib('util').post('/ajax/addidea/', idea, function(response) {
+            // creates an empty template, so that the idea could be prepended without
+            var li = lib('util').clone('li-idea-template');
+            
+            $(li).find('.li-idea-title').html(response.title + ":&nbsp;");
+            $(li).find('.li-idea-text').html(response.text);
+            $(li).find('.li-idea-title').attr('href', '/idea/' + response.id + '/');
+            $(li).find('.numvotes').html(response.upvotes);
+            $(li).attr('data-id', response.id);
+            $(li).find('.upvote').attr('data-id', response.id);
+            
+            for(var i=0;i<response.tags.length;++i)
+                $(li).find('.li-idea-tags').html($(li).find('.li-idea-tags').html() + '&nbsp;<span class="label label-info">' + response.tags[i] + '</span>');
+                
+            $(li).find('.upvote').click(function() {
+                lib('ideas').upvote(response.id, function(res) { $('.li-idea[data-id="' + response.id + '"] .numvotes').html(res.upvotes) });
+            });
+            
+            $('.idealist').prepend(li);
+        });
+
+
+
+
+
+
+
     },
     
     add: function() {

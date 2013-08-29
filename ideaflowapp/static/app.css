@@ -101,3 +101,8 @@ i {
 div.entryChildren > ul.idealist {
     margin-left: 60px;
 }
+
+  .override {
+    padding: none !important;
+    margin: none !important;
+  }
