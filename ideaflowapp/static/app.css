@@ -1,3 +1,18 @@
+.ms-res-ctn {
+    height: auto !important;
+}
+
+.autofill-container > .ms-ctn {
+    float: right !important;
+}
+
+.li-idea-tags {
+    float: left;
+}
+
+
+/* jacob wants to be organized n shit */
+
 .label-info.expanded {
   background-color: #C00;
 

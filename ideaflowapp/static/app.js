@@ -41,8 +41,9 @@ lib('home', {
                         i=Math.min(i,80)
                     
                     }
-                    else
-                        i=80
+                    else {
+                        i=80;
+                    }
                     
 
                     $('#idea-title').val(txt.substr(0,i));
@@ -154,6 +155,7 @@ lib('home', {
                 selectionStacked: true,
             });
         */
+        /*
             var msAutofillInlines = $('.autofill-inline').magicSuggest({
 
                 // selectionPosition: 'right',
@@ -178,10 +180,11 @@ lib('home', {
                 selectionPosition: 'right',
                 selectionStacked: true
             }); 
+            */
 
        
 
-            $('.autofill-container input'). attr('placeholder','Type related ideas');
+            //$('.autofill-container input'). attr('placeholder','Type related ideas');
 
         //  $("#ms-ctn-0").css('width','500px');
 
@@ -200,6 +203,7 @@ lib('home', {
                 },
                 minChars: 0,
                 selectionStacked: true,
+                typeDelay: 20,
                 method:'GET',
                 expanded:true,
                 expandOnFocus:true,
@@ -209,13 +213,37 @@ lib('home', {
                                 selectionPosition: 'right',
                 selectionStacked: true
             });    
-                 $(msAutofillAddIdea).on('load', function(){
+
+            var msAutofillInline = $('.autofill-inline').magicSuggest({
+
+                // selectionPosition: 'right',
+                selectionCls: 'selectedx',
+                renderer: function(idea){
+                    //console.log(idea.name)
+                    return '<div>' +
+                            '<div style="font-family: Arial; font-weight: bold">' + idea.name + '</div>' +
+                            '<div><b>Text</b>: ' + idea.text + '</div>' +
+                           '</div>';
+                },
+                minChars: 0,
+                typeDelay: 20,
+                selectionStacked: true,
+                method:'GET',
+                expanded:true,
+                expandOnFocus:true,
+                maxDropHeight:'500px',
+                name:'query',
+                data: '/ajax/autocomplete/', //jsonData2
+                                selectionPosition: 'right',
+                selectionStacked: true
+            });    
+
+             /*    $(msAutofillAddIdea).on('load', function(){
                 msAutofillAddIdea.setValue(14183);
             });
 
             console.log(x=msAutofillAddIdea);
-
-            $('.ms-res-ctn').css('height','auto');
+*/
 
 
     },
