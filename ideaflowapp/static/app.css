@@ -8,18 +8,28 @@
 
 .li-idea-tags {
     float: left;
+    margin-right:-7px;
+    line-height:22px;
 }
 
 
 /* jacob wants to be organized n shit */
 
-.label-info.expanded {
-  background-color: #C00;
+.label-info.expanded, .label-info, .ms-sel-ctn .ms-sel-item {
+  background-color: #3a87ad;
+  color:#EEE;
+  float:left;
+  font-size:12px;
+  padding:0 5px;
+  border-radius:3px;
+  margin-left:5px;
+  margin-top:4px
 
 }
 
 .idea-form input[type=text] {
     display: block;
+
     width: 80%;
     margin: auto;
     margin-bottom: 10px;
