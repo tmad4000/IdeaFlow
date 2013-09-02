@@ -210,7 +210,8 @@ lib('home', {
                 maxDropHeight:'500px',
                 name:'query',
                 data: '/ajax/autocomplete/', //jsonData2
-                                selectionPosition: 'right',
+                emptyText:'Add related ideas',
+                selectionPosition: 'right',
                 selectionStacked: true
             });    
 
@@ -234,7 +235,8 @@ lib('home', {
                 maxDropHeight:'500px',
                 name:'query',
                 data: '/ajax/autocomplete/', //jsonData2
-                                selectionPosition: 'right',
+                selectionPosition: 'right',
+                emptyText:'Add related ideas',
                 selectionStacked: true
             });    
 
